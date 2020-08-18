@@ -1,5 +1,6 @@
 import React from 'react';
-import { Grid, Paper } from '@material-ui/core';
+import { Grid, Paper, Container } from '@material-ui/core';
+import { unstable_renderSubtreeIntoContainer } from 'react-dom';
 
 const skills = [
   "React",
@@ -32,17 +33,20 @@ const styles = {
   brick: {
     backgroundColor: "#BB4545",
     backgroundImage: "url(./assets/brick.png)",
-    width: "80%",
-    height: "80%",
+    width: "100%",
+    height: "10vh",
     padding: "10px 10px 10px 10px",
+    margin: "5px 5px 5px 5px",
     color: "white",
-    fontWeight: "bolder"
+    fontSize: "2em",
+    fontWeight: "bolder",
+    verticalAlign:"middle"
   },
   spacer: {
     marginLeft: "10px"
   },
   wall: {
-    height: "50vh"
+    marginLeft: "15vw"
   }
 }
 
@@ -51,7 +55,7 @@ const evenRows = 4;
 
 function renderBrick(skill, index) {
   return (
-    <Grid key={index} item xs={2} container justify="center" alignItems="stretch">
+    <Grid key={index} item xs={2} container justify="center" alignItems="center">
       <Paper style={styles.brick}>
         {skill}
       </Paper>
@@ -65,50 +69,55 @@ function renderSpacer(space) {
   )
 }
 
+function renderContainer(index) {
+  const skillIndex = Math.floor((index)/2)*7 + ((index)%2)*3; // 0: 3, 1: 7, 2: 10, 3: 14, 4: 17, 5: 21
+  // if odd containerIndex, render 3, if even, render 4
+  if (index%2===0) {
+    return (
+      <Grid container direction="row" alignItems="center" justify="center">
+        {
+          [skills[skillIndex], skills[skillIndex+1], skills[skillIndex+2], skills[skillIndex+3]].map((skill)=> {
+            return renderBrick(skill)
+          })
+        }
+      </Grid>
+    )
+  }
+  else {
+    return (
+      <Grid container direction="row" alignItems="center" justify="center">
+        {
+          [skills[skillIndex], skills[skillIndex+1], skills[skillIndex+2]].map((skill)=> {
+            return renderBrick(skill)
+          })
+        }
+      </Grid>
+    )
+  }
+  
+}
+
 function renderLayers() {
-  let rowIsEven = true;
+  let rowIsEven = false;
   let rowIndex = 0;
 
   let gridItems = [];
+  let containers = [];
+  let containerIndices = [];
 
-  skills.forEach((skill, index) => {
-    const indexInSet = index % (oddRows+evenRows);
+  let numContainers = (skills.length / (evenRows+oddRows))*2;
+  for (let i = 0; i < numContainers; i++) {
+    containerIndices.push(i);
+  }
+  return containerIndices.map((containerIndex) => {
+    return renderContainer(containerIndex);
+  });
 
-
-    // new formation
-    if (indexInSet === 0) {
-      gridItems.push(renderSpacer(1));
-    }
-
-    gridItems.push(renderBrick(skill,index))
-    
-    if (indexInSet === oddRows-1) {
-      gridItems.push(renderSpacer(3));
-    }
-    if (indexInSet === oddRows+evenRows-1) {
-      gridItems.push(renderSpacer(3))
-    }
-  })
-
-  return gridItems;
-
-  // return skills.map((skill, index) => {
-  //   if (rowIsEven && rowIndex > evenRows) {
-  //     rowIsEven = false;
-  //     rowIndex = 0;
-  //   }
-  //   else if (!rowIsEven && rowIndex > oddRows)
-  //   {
-  //     rowIsEven = true;
-  //     rowIndex = 0;
-  //   }
-  //   return renderBrick(skill, rowIsEven, rowIndex)
-  // })
 }
 
 function SkillBricks() {
   return (
-    <Grid item xs={10} container spacing={0} alignItems="center" justify="center" style={styles.wall}>
+    <Grid item xs={10} container spacing={0} direction="column" alignItems="flex-start" justify="flex-start" style={styles.wall}>
       {renderLayers()}
     </Grid>
   )

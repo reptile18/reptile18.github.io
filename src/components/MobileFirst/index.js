@@ -8,7 +8,7 @@ const styles = {
   },
   header: {
     right: "10vw",
-    top: "5vw",
+    top: "0vw",
     position: "relative"
   },
   mobiles: {
