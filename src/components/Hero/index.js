@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Grid } from '@material-ui/core';
 import Fade from '@material-ui/core/Fade';
+import SocialButtons from '../SocialButtons';
 
 const styles = {
   container: {
@@ -10,7 +11,7 @@ const styles = {
   gridContainer: {
     backgroundImage: 'url(./assets/codingbackground.png)',
     backgroundSize: "contain",
-    height: '45vw',
+    height: '100vh',
     color: 'white',
 
   },
@@ -46,9 +47,10 @@ function Hero() {
             <img src="./assets/professionaljohnny.png" alt="Johnny Li" style={styles.johnny}></img>
           </Fade>
         </Grid>
-        <Grid item xs={9} style={styles.gridRight}>
+        <Grid container direction="column" item xs={9} style={styles.gridRight}>
           <h1>Johnny Li</h1>
           <h2>Full Stack Web Developer</h2>
+          <SocialButtons></SocialButtons> 
         </Grid>
       </Grid>
       
