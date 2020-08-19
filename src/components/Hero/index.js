@@ -24,8 +24,8 @@ const styles = {
 
   },
   johnny: {
-    height: '80%',
-    zIndex: 0,
+    height: "80%",
+    zIndex: 0
 
   }
 }
@@ -42,12 +42,12 @@ function Hero() {
   return (
     <Container maxWidth="xl" style={styles.container}>
       <Grid container direction="row" justify="center" alignItems="center" style={styles.gridContainer}>
-        <Grid container item xs={3} style={styles.gridLeft} justify="center" alignItems="flex-end" >
+        <Grid container item xs={6} sm={3} style={styles.gridLeft} justify="center" alignItems="flex-end" >
           <Fade in={fadeInJohnny} timeout={1000}>
             <img src="./assets/professionaljohnny.png" alt="Johnny Li" style={styles.johnny}></img>
           </Fade>
         </Grid>
-        <Grid container direction="column" item xs={9} style={styles.gridRight}>
+        <Grid container direction="column" item xs={6} style={styles.gridRight}>
           <h1>Johnny Li</h1>
           <h2>Full Stack Web Developer</h2>
           <SocialButtons></SocialButtons> 

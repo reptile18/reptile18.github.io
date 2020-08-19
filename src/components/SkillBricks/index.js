@@ -1,5 +1,6 @@
 import React from 'react';
-import { Grid, Paper} from '@material-ui/core';
+import { Grid, Paper, Typography} from '@material-ui/core';
+import './index.css';
 
 const skills = [
   "React",
@@ -33,19 +34,18 @@ const styles = {
     backgroundColor: "#BB4545",
     backgroundImage: "url(./assets/brick.png)",
     width: "100%",
-    height: "10vh",
+    height: "5vw",
     padding: "10px 10px 10px 10px",
     margin: "5px 5px 5px 5px",
-    color: "white",
-    fontSize: "2em",
     fontWeight: "bolder",
-    verticalAlign:"middle"
+    verticalAlign:"middle",
+    color: "white"
   },
   spacer: {
     marginLeft: "10px"
   },
   wall: {
-    marginLeft: "15vw"
+    marginLeft: "0vw"
   }
 }
 
@@ -54,10 +54,15 @@ const evenRows = 4;
 
 function renderBrick(skill, index) {
   return (
-    <Grid key={index} item xs={2} container justify="center" alignItems="center">
-      <Paper style={styles.brick}>
-        {skill}
-      </Paper>
+    <Grid key={index} item xs={3} container justify="center" alignItems="center">
+      <Grid className="brick" container item justify="center" alignItems="center" style={styles.brick}>
+        <div>
+          <Typography variant="h4" component="h1">
+            {skill}
+          </Typography>
+        </div>
+
+      </Grid>
     </Grid>
   )
 }
@@ -67,7 +72,7 @@ function renderContainer(index) {
   // if odd containerIndex, render 3, if even, render 4
   if (index%2===0) {
     return (
-      <Grid container direction="row" alignItems="center" justify="center">
+      <Grid key={index} container direction="row" alignItems="center" justify="center">
         {
           [skills[skillIndex], skills[skillIndex+1], skills[skillIndex+2], skills[skillIndex+3]].map((skill)=> {
             return renderBrick(skill)
@@ -78,7 +83,7 @@ function renderContainer(index) {
   }
   else {
     return (
-      <Grid container direction="row" alignItems="center" justify="center">
+      <Grid key={index} container direction="row" alignItems="center" justify="center">
         {
           [skills[skillIndex], skills[skillIndex+1], skills[skillIndex+2]].map((skill)=> {
             return renderBrick(skill)
@@ -105,7 +110,7 @@ function renderLayers() {
 
 function SkillBricks() {
   return (
-    <Grid item xs={10} container spacing={0} direction="column" alignItems="flex-start" justify="flex-start" style={styles.wall}>
+    <Grid item xs={12} sm={12} md={10} container spacing={0} direction="column" alignItems="center" justify="center" style={styles.wall}>
       {renderLayers()}
     </Grid>
   )

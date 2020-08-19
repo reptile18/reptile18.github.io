@@ -22,7 +22,7 @@ const styles = {
 
 function ExtensiveSkillset() {
   return (
-    <Grid container style={styles.container}>
+    <Grid container style={styles.container} justify="center">
       <h1 style={styles.header}>Extensive Skillset</h1>
       <SkillBricks></SkillBricks>
     </Grid>

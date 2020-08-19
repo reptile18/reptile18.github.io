@@ -100,6 +100,7 @@ const cards = [
 const styles = {
   container: {
     backgroundColor: "#111",
+    backgroundImage: "url(./assets/codingbackground.png)",
     color: "white"
   },
   card: {
@@ -135,11 +136,11 @@ function renderCard(card,index) {
           </CardContent>
         </CardActionArea>
         <CardActions>
-          <IconButton aria-label={`visit ${card.title}`}>
+          <IconButton onClick={() => {window.location.href=card.url}} aria-label={`visit ${card.title}`}>
             <LanguageIcon style={styles.icon} />
           </IconButton>
           <IconButton aria-label={`visit ${card.title} Github`}>
-            <GitHubIcon style={styles.icon} />
+            <GitHubIcon onClick={() => {window.location.href=card.github}} style={styles.icon} />
           </IconButton>
         </CardActions>
       </Card>

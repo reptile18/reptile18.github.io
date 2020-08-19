@@ -65,7 +65,7 @@ function renderSocial(item) {
 
 function SocialButtons() {
   return (
-    <Grid container spacing={10} justify="center">
+    <Grid container spacing={5} justify="center">
       {socials.map(renderSocial)}
     </Grid>
   )
