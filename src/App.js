@@ -1,22 +1,23 @@
 import React from 'react';
 import './App.css';
-import Hero from './components/Hero';
-import IntuitiveInterfaces from './components/IntuitiveInterfaces';
-import MobileFirst from './components/MobileFirst';
-import ExtensiveSkillset from "./components/ExtensiveSkillset"
+import Home from './pages/Home';
+import Portfolio from './pages/Portfolio';
+import Contact from './pages/Contact';
+import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Switch, Route  } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <Hero />
-      {/* Intuitive User Interfaces */}
-      <IntuitiveInterfaces></IntuitiveInterfaces>
-      {/* Mobile-first Design */}
-      <MobileFirst></MobileFirst>
-      {/* Wide Skillset */}
-      <ExtensiveSkillset></ExtensiveSkillset>
-      {/* Links to My Story, Projects, Contact(?) */}
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar></Navbar>
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/portfolio" component={Portfolio} />
+          <Route path="/contact" component={Contact} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

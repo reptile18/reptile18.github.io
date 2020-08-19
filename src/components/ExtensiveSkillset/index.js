@@ -1,5 +1,5 @@
 import React from 'react';
-import {Grid, Paper, Container, GridList, GridListTile} from '@material-ui/core';
+import {Grid} from '@material-ui/core';
 import SkillBricks from '../SkillBricks';
 
 const styles = {
@@ -11,7 +11,8 @@ const styles = {
   },
   header: {
     marginTop: "10vh",
-    marginLeft: "10vh"
+    marginLeft: "10vh",
+    color: "white"
   },
   attribution: {
     fontSize: "0.5em"

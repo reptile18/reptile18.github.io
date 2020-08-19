@@ -1,6 +1,5 @@
 import React from 'react';
-import { Grid, Paper, Container } from '@material-ui/core';
-import { unstable_renderSubtreeIntoContainer } from 'react-dom';
+import { Grid, Paper} from '@material-ui/core';
 
 const skills = [
   "React",
@@ -63,12 +62,6 @@ function renderBrick(skill, index) {
   )
 }
 
-function renderSpacer(space) {
-  return (
-    <Grid style={styles.spacer} item xs={space}></Grid>
-  )
-}
-
 function renderContainer(index) {
   const skillIndex = Math.floor((index)/2)*7 + ((index)%2)*3; // 0: 3, 1: 7, 2: 10, 3: 14, 4: 17, 5: 21
   // if odd containerIndex, render 3, if even, render 4
@@ -98,11 +91,6 @@ function renderContainer(index) {
 }
 
 function renderLayers() {
-  let rowIsEven = false;
-  let rowIndex = 0;
-
-  let gridItems = [];
-  let containers = [];
   let containerIndices = [];
 
   let numContainers = (skills.length / (evenRows+oddRows))*2;

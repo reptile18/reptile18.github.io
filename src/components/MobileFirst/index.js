@@ -9,7 +9,8 @@ const styles = {
   header: {
     right: "10vw",
     top: "0vw",
-    position: "relative"
+    position: "relative",
+    color: "white"
   },
   mobiles: {
     width: "20%",
