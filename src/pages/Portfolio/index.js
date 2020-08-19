@@ -114,7 +114,7 @@ const styles = {
 
 function renderCard(card,index) {
   return (
-    <Grid key={index} item container xs={6}>
+    <Grid key={index} item container sm={6} xs={12}>
       <Card style={styles.card}>
         <CardActionArea>
           <CardMedia 
@@ -153,7 +153,7 @@ function Portfolio() {
       <Grid item xs={12}>
         <h1>Portfolio</h1>
       </Grid>
-      <Grid item xs={8} container spacing={10} justify="center" alignItems="center">
+      <Grid item xs={12} sm={8} container spacing={10} justify="center" alignItems="center">
         {
           cards.map((card, index) => renderCard(card,index))
         }
