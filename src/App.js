@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Switch, Route  } from "react-router-dom";
 function App() {
   return (
     <Router basename={process.env.PUBLIC_URL}>
+      {console.log(`process.env.PUBLIC_URL: ${process.env.PUBLIC_URL}`)}
       <div className="App">
         <Navbar></Navbar>
         <Switch>
