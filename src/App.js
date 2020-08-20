@@ -12,9 +12,9 @@ function App() {
       <div className="App">
         <Navbar></Navbar>
         <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/portfolio" component={Portfolio} />
-          <Route path="/contact" component={Contact} />
+          <Route path={process.env.PUBLIC_URL + "/"} exact component={Home} />
+          <Route path={process.env.PUBLIC_URL + "/portfolio"} component={Portfolio} />
+          <Route path={process.env.PUBLIC_URL + "/contact"} component={Contact} />
         </Switch>
       </div>
     </Router>
