@@ -8,13 +8,13 @@ import { BrowserRouter as Router, Switch, Route  } from "react-router-dom";
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div className="App">
         <Navbar></Navbar>
         <Switch>
-          <Route path={process.env.PUBLIC_URL + "/"} exact component={Home} />
-          <Route path={process.env.PUBLIC_URL + "/portfolio"} component={Portfolio} />
-          <Route path={process.env.PUBLIC_URL + "/contact"} component={Contact} />
+          <Route path="/" exact component={Home} />
+          <Route path="/portfolio" component={Portfolio} />
+          <Route path="/contact" component={Contact} />
         </Switch>
       </div>
     </Router>
