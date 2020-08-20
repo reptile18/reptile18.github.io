@@ -1,5 +1,6 @@
 import React from 'react';
-import {AppBar, Toolbar, Typography, Link} from '@material-ui/core';
+import {AppBar, Toolbar, Typography, Link as MuiLink} from '@material-ui/core';
+import {Link as RouterLink} from 'react-router-dom';
 
 const styles = {
   toolbar: {
@@ -26,15 +27,21 @@ function Navbar() {
             My Portfolio
           </Typography>
           <nav style={styles.nav}>
-            <Link style={styles.link} href="/">
-              Home
-            </Link>
-            <Link style={styles.link} href="/portfolio">
-              Portfolio
-            </Link>
-            <Link style={styles.link} href="/contact">
-              Contact
-            </Link>
+            <RouterLink to="/">
+              <MuiLink style={styles.link}>
+                Home
+              </MuiLink>
+            </RouterLink>
+            <RouterLink to="/portfolio">
+              <MuiLink style={styles.link}>
+                Portfolio
+              </MuiLink>
+            </RouterLink>
+            <RouterLink to="/contact">
+              <MuiLink style={styles.link}>
+                Contact
+              </MuiLink>
+            </RouterLink>
           </nav>
         </Toolbar>
 
