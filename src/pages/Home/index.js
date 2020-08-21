@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Hero from '../../components/Hero';
 import IntuitiveInterfaces from '../../components/IntuitiveInterfaces';
 import MobileFirst from '../../components/MobileFirst';

@@ -40,11 +40,13 @@ function Navbar() {
                 Portfolio
               </MuiLink>
             </RouterLink>
-            <RouterLink style={styles.link} to="/contact">
+            {/*
+              <RouterLink style={styles.link} to="/contact">
               <MuiLink style={styles.link}>
                 Contact
               </MuiLink>
             </RouterLink>
+            */}
           </nav>
         </Toolbar>
 
