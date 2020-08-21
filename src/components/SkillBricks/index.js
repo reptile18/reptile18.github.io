@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Grid, Typography} from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import './index.css';
 import VizSensor from 'react-visibility-sensor';
 import SkillBrick from '../SkillBrick';
@@ -48,21 +48,6 @@ const styles = {
 const oddRows = 3;
 const evenRows = 4;
 const animationDuration = 150;
-
-function renderBrick(skill, index) {
-  return (
-    <Grid key={index} item xs={3} container justify="center" alignItems="center">
-      <Grid className="brick" container item justify="center" alignItems="center" style={styles.brick}>
-        <div>
-          <Typography variant="h4" component="h1">
-            {skill}
-          </Typography>
-        </div>
-
-      </Grid>
-    </Grid>
-  )
-}
 
 function renderContainer(index, startAnimation) {
   const skillIndex = Math.floor((index)/2)*7 + ((index)%2)*3; // 0: 3, 1: 7, 2: 10, 3: 14, 4: 17, 5: 21
