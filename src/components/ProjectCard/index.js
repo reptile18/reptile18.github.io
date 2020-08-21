@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import VizSensor from 'react-visibility-sensor';
 import Fade from '@material-ui/core/Fade';
-import { Grid, Typography, IconButton, Button } from '@material-ui/core';
+import { Grid, Typography, IconButton } from '@material-ui/core';
 import { Card, CardActionArea, CardMedia, CardContent, CardActions} from '@material-ui/core';
 import LanguageIcon from '@material-ui/icons/Language';
 import GitHubIcon from '@material-ui/icons/GitHub';

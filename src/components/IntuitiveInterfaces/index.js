@@ -1,9 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import {Grid} from '@material-ui/core';
 import Fade from '@material-ui/core/Fade';
-// import loo from '../assets/interface0.png';
-// import ccidi from '../assets/interface1.png';
-// import purple from '../assets/interface2.png';
 import VizSensor from 'react-visibility-sensor';
 
 const styles = {
