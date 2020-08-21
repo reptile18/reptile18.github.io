@@ -4,14 +4,17 @@ import {Link as RouterLink} from 'react-router-dom';
 
 const styles = {
   toolbar: {
-    backgroundColor: "#333"
+    backgroundColor: "#333",
+    backgroundImage: "linear-gradient(to right, #333, #DDD)"
   },
   appName: {
-    fontWeight: "bold"
+    fontWeight: "bolder"
   },
   link: {
     color: "white",
-    marginLeft: "1em"
+    textDecoration: "none",
+    marginLeft: "1em",
+    fontWeight: "bold"
   },
   nav: {
     textAlign: "right"
@@ -27,17 +30,17 @@ function Navbar() {
             My Portfolio
           </Typography>
           <nav style={styles.nav}>
-            <RouterLink to="/">
+            <RouterLink style={styles.link} to="/">
               <MuiLink style={styles.link}>
                 Home
               </MuiLink>
             </RouterLink>
-            <RouterLink to="/portfolio">
+            <RouterLink style={styles.link} to="/portfolio">
               <MuiLink style={styles.link}>
                 Portfolio
               </MuiLink>
             </RouterLink>
-            <RouterLink to="/contact">
+            <RouterLink style={styles.link} to="/contact">
               <MuiLink style={styles.link}>
                 Contact
               </MuiLink>

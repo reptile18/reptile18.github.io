@@ -1,8 +1,7 @@
 import React from 'react';
-import { Grid, Typography, IconButton } from '@material-ui/core';
-import { Card, CardActionArea, CardMedia, CardContent, CardActions} from '@material-ui/core';
-import LanguageIcon from '@material-ui/icons/Language';
-import GitHubIcon from '@material-ui/icons/GitHub';
+import { Grid } from '@material-ui/core';
+import ProjectCard from '../../components/ProjectCard';
+
 /*
   All cards to have the following props:
   favicon,
@@ -102,51 +101,12 @@ const styles = {
     backgroundColor: "#111",
     backgroundImage: "url(./assets/codingbackground.png)",
     color: "white"
-  },
-  card: {
-    backgroundColor: "#333",
-    color: "#DDD",
-    textAlign: "left"
-  },
-  icon: {
-    color: "#DDD"
   }
 }
 
-function renderCard(card,index) {
-  return (
-    <Grid key={index} item container sm={6} xs={12}>
-      <Card style={styles.card}>
-        <CardActionArea>
-          <CardMedia 
-            component="img"
-            alt={card.title}
-            image={card.screenshot}
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
-              {card.title}
-            </Typography>
-            <Typography gutterBottom variant="caption" component="p">
-              {card.blurb}
-            </Typography>
-            <Typography gutterBottom component="p">
-              {card.description}
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-        <CardActions>
-          <IconButton onClick={() => {window.location.href=card.url}} aria-label={`visit ${card.title}`}>
-            <LanguageIcon style={styles.icon} />
-          </IconButton>
-          <IconButton aria-label={`visit ${card.title} Github`}>
-            <GitHubIcon onClick={() => {window.location.href=card.github}} style={styles.icon} />
-          </IconButton>
-        </CardActions>
-      </Card>
-    </Grid>
-  )
-}
+
+
+
 
 function Portfolio() {
   return (
@@ -156,7 +116,7 @@ function Portfolio() {
       </Grid>
       <Grid item xs={12} sm={8} container spacing={10} justify="center" alignItems="center">
         {
-          cards.map((card, index) => renderCard(card,index))
+          cards.map((card, index) => <ProjectCard key={index} card={card} index={index} />)
         }
       </Grid>
     </Grid>

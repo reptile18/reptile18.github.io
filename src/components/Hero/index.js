@@ -36,14 +36,14 @@ function Hero() {
     if (!fadeInJohnny) {
       setTimeout(() => {
         setFadeInJohnny(true);
-      }, 1000);
+      }, 500);
     }
   },[fadeInJohnny]);
   return (
     <Container maxWidth="xl" style={styles.container}>
       <Grid container direction="row" justify="center" alignItems="center" style={styles.gridContainer}>
         <Grid container item xs={6} sm={3} style={styles.gridLeft} justify="center" alignItems="flex-end" >
-          <Fade in={fadeInJohnny} timeout={1000}>
+          <Fade in={fadeInJohnny} timeout={3000}>
             <img src="./assets/professionaljohnny.png" alt="Johnny Li" style={styles.johnny}></img>
           </Fade>
         </Grid>
