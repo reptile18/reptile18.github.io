@@ -57,7 +57,7 @@ function renderContainer(index, startAnimation) {
       <Grid key={index} container direction="row" alignItems="center" justify="center">
         {
           [skills[skillIndex], skills[skillIndex+1], skills[skillIndex+2], skills[skillIndex+3]].map((skill,index)=> {
-            return <SkillBrick skill={skill} index={skillIndex+index} animate={startAnimation} time={(skills.length-skillIndex+index)*animationDuration} />
+            return <SkillBrick key={skillIndex+index} skill={skill} index={skillIndex+index} animate={startAnimation} time={(skills.length-skillIndex+index)*animationDuration} />
           })
         }
       </Grid>
@@ -68,7 +68,7 @@ function renderContainer(index, startAnimation) {
       <Grid key={index} container direction="row" alignItems="center" justify="center">
         {
           [skills[skillIndex+1], skills[skillIndex+2], skills[skillIndex+3]].map((skill,index)=> {
-            return <SkillBrick skill={skill} index={skillIndex+1+index} animate={startAnimation} time={(skills.length-skillIndex+1+index)*animationDuration}  />
+            return <SkillBrick key={skillIndex+1+index} skill={skill} index={skillIndex+1+index} animate={startAnimation} time={(skills.length-skillIndex+1+index)*animationDuration}  />
           })
         }
       </Grid>

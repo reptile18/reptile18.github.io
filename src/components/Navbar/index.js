@@ -5,7 +5,7 @@ import {Link as RouterLink} from 'react-router-dom';
 const styles = {
   toolbar: {
     backgroundColor: "#333",
-    backgroundImage: "linear-gradient(to right, #333, #DDD)"
+    backgroundImage: "linear-gradient(to top, #222, #777)"
   },
   appName: {
     fontWeight: "bolder"

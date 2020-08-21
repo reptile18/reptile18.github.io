@@ -10,8 +10,10 @@ const styles = {
     height: "5vw",
     padding: "10px 10px 10px 10px",
     margin: "5px 5px 5px 5px",
-    fontWeight: "bolder",
     verticalAlign:"middle",
+  },
+  brickText: {
+    fontWeight: "bold",
     color: "white"
   }
 }
@@ -32,7 +34,7 @@ function SkillBrick(props) {
       <Grid key={props.index} item xs={3} container justify="center" alignItems="center">
         <Grid className="brick" container item justify="center" alignItems="center" style={styles.brick}>
           <div>
-            <Typography variant="h4" component="h1">
+            <Typography style={styles.brickText} variant="h4" component="h1">
               {props.skill}
             </Typography>
           </div>
