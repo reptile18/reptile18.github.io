@@ -39,6 +39,9 @@ const socials = [
 const styles = {
   link: {
     color: "white"
+  },
+  debugGrid: {
+    border: "1px solid yellow"
   }
 }
 
@@ -63,9 +66,9 @@ function renderSocial(item) {
   return <Grid key={item.name} item><Link style={styles.link} href={item.link}>{renderSocialIcon(item.name)}</Link></Grid>
 }
 
-function SocialButtons() {
+function SocialButtons(props) {
   return (
-    <Grid container spacing={5} justify="center">
+    <Grid style={styles.debugGrid} xs={props.xs} sm={props.sm} md={props.md} lg={props.lg} container spacing={5} justify="center">
       {socials.map(renderSocial)}
     </Grid>
   )

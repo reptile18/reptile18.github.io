@@ -3,6 +3,7 @@ import Hero from '../../components/Hero';
 import IntuitiveInterfaces from '../../components/IntuitiveInterfaces';
 import MobileFirst from '../../components/MobileFirst';
 import ExtensiveSkillset from "../../components/ExtensiveSkillset"
+import ConnectWithMe from '../../components/ConnectWithMe';
 
 function Home() {
   return (
@@ -15,6 +16,7 @@ function Home() {
       {/* Wide Skillset */}
       <ExtensiveSkillset></ExtensiveSkillset>
       {/* Links to My Story, Projects, Contact(?) */}
+      <ConnectWithMe />
     </div>
   )
 }

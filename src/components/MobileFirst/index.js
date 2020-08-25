@@ -3,11 +3,12 @@ import {Grid} from '@material-ui/core';
 import VizSensor from 'react-visibility-sensor';
 import Fade from '@material-ui/core/Fade';
 import Grow from '@material-ui/core/Grow';
+import CellphonesImg from '../../assets/cellphones.png'
 import './style.css';
 
 const styles = {
   container: {
-    backgroundImage: "url(./assets/cellphones.png)",
+    backgroundImage: `url(${CellphonesImg})`,
     height: "100vh"
   },
   header: {

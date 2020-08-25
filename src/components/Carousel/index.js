@@ -16,7 +16,6 @@ const styles={
 
 function Carousel(props) {
   const [currentSlide,SetCurrentSlide] = useState(0);
-  const [timer,SetTimer] = useState(null);
 
   useEffect(() => {
     const timer = setTimeout(() => {

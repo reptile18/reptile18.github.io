@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import { Grid, Paper} from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import Fade from '@material-ui/core/Fade';
-import Slide from '@material-ui/core/Slide';
 import VizSensor from 'react-visibility-sensor';
 import Carousel from '../Carousel';
+import interfacesImg from '../../assets/interfaces.jpg';
 import "./style.css";
 
 const styles = {
   container: {
-    backgroundImage: "url(./assets/interfaces.jpg)",
+    backgroundImage: `url(${interfacesImg})`,
     backgroundSize: "cover",
     color: "white",
     height: "100vh",
@@ -40,9 +40,6 @@ const styles = {
 
 function IntuitiveInterfaces() {
   const [fade0, setFade0] = useState(false);
-  const [fade1, setFade1] = useState(false);
-  const [fade2, setFade2] = useState(false);
-  const [currentSlide, setCurrentSlide] = useState(0);
 
   return (
     <Grid container style={styles.container} justify="center">

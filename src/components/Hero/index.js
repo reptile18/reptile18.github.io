@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Container, Grid } from '@material-ui/core';
 import Fade from '@material-ui/core/Fade';
 import SocialButtons from '../SocialButtons';
+import codingbackground from '../../assets/codingbackground.png';
 
 const styles = {
   container: {
@@ -9,7 +10,7 @@ const styles = {
     paddingRight: "0"
   },
   gridContainer: {
-    backgroundImage: 'url(./assets/codingbackground.png)',
+    backgroundImage: `url(${codingbackground})`,
     backgroundSize: "contain",
     height: '100vh',
     color: 'white',
