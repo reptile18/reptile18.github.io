@@ -19,11 +19,7 @@ const styles = {
   },
   emailLink: {
     color: "white"
-  },
-  debugGrid: {
-    border: "1px solid magenta"
   }
-  
 }
 
 function ConnectWithMe() {
@@ -37,10 +33,10 @@ function ConnectWithMe() {
             <Grid style={styles.debugGrid} item xs={3} container direction="row" justify="center" alignItems="center">
               <Resume />
             </Grid>
-            <Grid style={styles.debugGrid} item xs={3} container justify="center">
+            <Grid item xs={3} container justify="center">
               <SocialButtons lg={12} md={8} sm={12} xs={2}/>
             </Grid>
-            <Grid style={styles.debugGrid} item xs={3}>
+            <Grid item xs={3}>
               <a style={styles.emailLink} href="mailto:reptile18@gmail.com">
                 <ContactMailIcon className="email" />
               </a>

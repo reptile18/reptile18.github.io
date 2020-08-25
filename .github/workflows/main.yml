@@ -36,3 +36,7 @@ jobs:
       # You may pin to the exact commit or the version.
       # uses: Cecilapp/GitHub-Pages-deploy@10c15d01fe8f5100fdcc07f1568fe94bfa7b7d4c
       uses: Cecilapp/GitHub-Pages-deploy@2.0.1
+      env: 
+        EMAIL: reptile18@gmail.com
+        GH_TOKEN: ${{ secrets.GH_PAGES_ACCESS_TOKEN }}
+        BUILD_DIR: public

@@ -9,12 +9,8 @@ const paperHeight = 351;
 
 const styles = {
   container: {
-    height: "375px",
     width: "100%",
     position: "relative",
-    display: "inline-block",
-    border: "1px solid yellow"
-
   },
   pg1: {
     boxShadow: "1px 1px 5px #000000",
