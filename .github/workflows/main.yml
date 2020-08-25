@@ -39,4 +39,4 @@ jobs:
       env: 
         EMAIL: reptile18@gmail.com
         GH_TOKEN: ${{ secrets.GH_PAGES_ACCESS_TOKEN }}
-        BUILD_DIR: static
+        BUILD_DIR: public
