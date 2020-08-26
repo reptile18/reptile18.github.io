@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import page1 from '../../assets/resume/pg1.png';
 import page2 from '../../assets/resume/pg2.png';
 import gDrive from '../../assets/resume/drive.png';
+import VizSensor from 'react-visibility-sensor';
+import { Fade } from '@material-ui/core';
 
 import './style.css';
 
@@ -36,14 +38,19 @@ const styles = {
 }
 
 function Resume() {
+  const [fadeResume, SetFadeResume] = useState(false);
   return (
-    <div className="resume" style={styles.container}>
-      <a href="https://docs.google.com/document/d/1_fizZKFhCxe0v8OxU9qo75DfHMkb5PK-I8IRsHQswJo/">
-        <img style={styles.pg2} src={page2} alt="page two of resume" />
-        <img style={styles.pg1} src={page1} alt="page one of resume" />  
-        <img style={styles.gDrive} src={gDrive} alt="google drive" />
-      </a>
-    </div>
+    <VizSensor onChange={isVisible=> SetFadeResume(isVisible)}>
+      <Fade in={fadeResume} timeout={1500}>
+        <div className="resume" style={styles.container}>
+          <a href="https://docs.google.com/document/d/1_fizZKFhCxe0v8OxU9qo75DfHMkb5PK-I8IRsHQswJo/">
+            <img style={styles.pg2} src={page2} alt="page two of resume" />
+            <img style={styles.pg1} src={page1} alt="page one of resume" />  
+            <img style={styles.gDrive} src={gDrive} alt="google drive" />
+          </a>
+        </div>
+      </Fade>
+    </VizSensor>
   )
 }
 

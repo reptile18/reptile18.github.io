@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Grid } from '@material-ui/core';
 import VizSensor from 'react-visibility-sensor';
 import Resume from '../Resume';
@@ -6,6 +6,7 @@ import ContactMailIcon from '@material-ui/icons/ContactMail';
 import './style.css';
 import SocialButtons from '../SocialButtons';
 import LightTunnelImg from '../../assets/lighttunnel.jpeg'
+import { Fade } from '@material-ui/core';
 
 const styles = {
   container: {
@@ -23,8 +24,10 @@ const styles = {
 }
 
 function ConnectWithMe() {
+  const [showFadeBig, SetShowFadeBig] = useState(false);
+
   return (
-    <VizSensor>
+    
       <Grid container style={styles.container} justify="center" alignItems="center" direction="column" >
           <Grid style={styles.headerGrid} item xs={3} container justify="center" alignItems="center">
             <h1>Connect with Me</h1>
@@ -37,16 +40,16 @@ function ConnectWithMe() {
               <SocialButtons lg={12} md={8} sm={12} xs={2}/>
             </Grid>
             <Grid item xs={3}>
-              <a style={styles.emailLink} href="mailto:reptile18@gmail.com">
-                <ContactMailIcon className="email" />
-              </a>
+              <VizSensor onChange={isVisible => { SetShowFadeBig(isVisible) }}>
+                <Fade in={showFadeBig} timeout={1000}>
+                  <a style={styles.emailLink} href="mailto:reptile18@gmail.com">
+                    <ContactMailIcon className="email" />
+                  </a>
+                </Fade>
+              </VizSensor>
             </Grid>
-            
-            
           </Grid>
-          
         </Grid>
-    </VizSensor>
   )
 }
 
