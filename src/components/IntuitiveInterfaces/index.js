@@ -47,7 +47,7 @@ function IntuitiveInterfaces() {
         <h1 style={styles.header}>Intuitive Interfaces</h1>
       </Grid>
       <Grid container item justify="center" align-items="center" xs={12} lg={8}>
-        <VizSensor onChange={(isVisible) => {setFade0(isVisible); console.log("isVisible", isVisible)}}>
+        <VizSensor onChange={(isVisible) => setFade0(isVisible) }>
           <Fade in={fade0} timeout={2000}>
             <Carousel style={styles.carousel}>
               {/* Skip to the Loo */}

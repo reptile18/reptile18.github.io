@@ -93,7 +93,7 @@ function renderLayers(startAnimation) {
 function SkillBricks() {
   const [startAnimation,setStartAnimation] = useState(false);
   return (
-    <VizSensor onChange={(isVisible) => {setStartAnimation(isVisible)} }>
+    <VizSensor onChange={(isVisible) => {setStartAnimation(isVisible)}} partialVisibility>
       <Grid 
         item 
         xs={12} sm={12} md={10} 
