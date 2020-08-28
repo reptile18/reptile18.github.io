@@ -1,7 +1,7 @@
 import React from 'react';
 import {Grid} from '@material-ui/core';
 import SkillBricks from '../SkillBricks';
-import Concrete from '../../assets/concrete-3.jpg';
+import Concrete from '../../assets/concrete-3-min.jpg';
 
 const styles = {
   container: {
