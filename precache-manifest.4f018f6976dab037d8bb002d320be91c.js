@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3397ec205b8b73de57e49ae1683cf274",
+    "revision": "b004e067f3bccbddd1469f3f14ced32a",
     "url": "/index.html"
   },
   {
-    "revision": "ff2c8a397b07c0124da9",
+    "revision": "71b5149006015d35e1b3",
     "url": "/static/css/main.b33c6fcb.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.029842e2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ff2c8a397b07c0124da9",
-    "url": "/static/js/main.db9ef8ae.chunk.js"
+    "revision": "71b5149006015d35e1b3",
+    "url": "/static/js/main.34387627.chunk.js"
   },
   {
     "revision": "a653cec2941d42158079",
@@ -28,16 +28,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/brick.fba5f844.png"
   },
   {
-    "revision": "469074679442ee09bd6f399f558c6197",
-    "url": "/static/media/cellphones-min.46907467.png"
+    "revision": "f24a8485d81ea3fbb20b58001163a29d",
+    "url": "/static/media/cellphones-min.f24a8485.jpg"
   },
   {
     "revision": "3d0d31c156a1cfd00f4f7af5aae75063",
     "url": "/static/media/codingbackground-min.3d0d31c1.png"
   },
   {
-    "revision": "aa89c10c0e021fbf3090b8fb0d4c6414",
-    "url": "/static/media/concrete-3-min.aa89c10c.jpg"
+    "revision": "4ce1fffe2886fbb8c6798163126ee9ef",
+    "url": "/static/media/concrete-3-min.4ce1fffe.jpg"
   },
   {
     "revision": "f47455326884dd5a08aa8ac250f2ff57",
