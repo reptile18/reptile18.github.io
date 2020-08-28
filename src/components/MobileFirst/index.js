@@ -3,7 +3,9 @@ import {Grid} from '@material-ui/core';
 import VizSensor from 'react-visibility-sensor';
 import Fade from '@material-ui/core/Fade';
 import Grow from '@material-ui/core/Grow';
-import CellphonesImg from '../../assets/cellphones.png'
+import CellphonesImg from '../../assets/cellphones.png';
+import Mobile1 from '../../assets/pixel2_ccidi.png';
+import Mobile2 from '../../assets/pixel2_sttl.png';
 import './style.css';
 
 const styles = {
@@ -31,14 +33,14 @@ function MobileFirst() {
         <VizSensor onChange={(isVisible) => setShowMobiles(isVisible)}>
           <Grow in={showMobiles} timeout={1000}>
             <Fade in={showMobiles} timeout={1000}>
-              <img className="mobile" style={styles.mobiles} src="./assets/pixel2_ccidi.png" alt="covid can i do it, on mobile"></img>
+              <img className="mobile" style={styles.mobiles} src={Mobile1} alt="covid can i do it, on mobile"></img>
             </Fade>
           </Grow>
         </VizSensor>
         <VizSensor onChange={(isVisible) => setShowMobiles(isVisible)}>
           <Grow in={showMobiles} timeout={1000}>
             <Fade in={showMobiles} timeout={1000}>
-              <img className="mobile" style={styles.mobiles} src="./assets/pixel2_sttl.png" alt="skip to the loo, on mobile"></img>
+              <img className="mobile" style={styles.mobiles} src={Mobile2} alt="skip to the loo, on mobile"></img>
             </Fade>
           </Grow>
         </VizSensor>

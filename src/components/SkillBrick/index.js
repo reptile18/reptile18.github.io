@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Grid, Typography} from '@material-ui/core';
 import Slide from '@material-ui/core/Slide';
+import Brick from '../../assets/brick.png';
 
 const styles = {
   brick: {
     backgroundColor: "#BB4545",
-    backgroundImage: "url(./assets/brick.png)",
+    backgroundImage: `url(${Brick})`,
     width: "100%",
     height: "5vw",
     padding: "10px 10px 10px 10px",

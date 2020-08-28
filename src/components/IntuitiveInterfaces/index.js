@@ -4,6 +4,9 @@ import Fade from '@material-ui/core/Fade';
 import VizSensor from 'react-visibility-sensor';
 import Carousel from '../Carousel';
 import interfacesImg from '../../assets/interfaces.jpg';
+import interface0 from '../../assets/interface0.png';
+import interface1 from '../../assets/interface1.png';
+import interface2 from '../../assets/interface2.png';
 import "./style.css";
 
 const styles = {
@@ -51,11 +54,11 @@ function IntuitiveInterfaces() {
           <Fade in={fade0} timeout={2000}>
             <Carousel style={styles.carousel}>
               {/* Skip to the Loo */}
-                <img className="img" focused={"true"} style={styles.loo} src={'./assets/interface0.png'} alt="skip to the loo" />
+                <img className="img" focused={"true"} style={styles.loo} src={interface0} alt="skip to the loo" />
               {/* CCIDI */}
-                <img className="img" focused={"true"} style={styles.ccidi} src={'./assets/interface1.png'} alt="covid can i do it" />
+                <img className="img" focused={"true"} style={styles.ccidi} src={interface1} alt="covid can i do it" />
               {/* Portfolio */}
-                <img className="img" focused={"true"} style={styles.purple} src={'./assets/interface2.png'} alt="purple pages" />
+                <img className="img" focused={"true"} style={styles.purple} src={interface2} alt="purple pages" />
             </Carousel>
           </Fade>
         </VizSensor>
