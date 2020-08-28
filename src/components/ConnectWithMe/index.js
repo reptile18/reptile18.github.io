@@ -35,11 +35,12 @@ function ConnectWithMe() {
           <Grid style={styles.connectContainer} item xs={9} container direction="row" justify="space-between" alignItems="center">
             <Grid style={styles.debugGrid} item xs={3} container direction="row" justify="center" alignItems="center">
               <Resume />
+              <h3>Resume</h3>
             </Grid>
             <Grid item xs={3} container justify="center">
               <SocialButtons lg={12} md={8} sm={12} xs={2}/>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={3} direction="column" justify="center" alignItems="center">
               <VizSensor onChange={isVisible => { SetShowFadeBig(isVisible) }}>
                 <Fade in={showFadeBig} timeout={1000}>
                   <a style={styles.emailLink} href="mailto:reptile18@gmail.com">
@@ -47,6 +48,7 @@ function ConnectWithMe() {
                   </a>
                 </Fade>
               </VizSensor>
+              <h3>Email</h3>
             </Grid>
           </Grid>
         </Grid>

@@ -27,7 +27,7 @@ function Navbar() {
       <AppBar position="static">
         <Toolbar style={styles.toolbar}>
           <Typography  variant="h6">
-            My Portfolio
+            Johnny Li
           </Typography>
           <nav style={styles.nav}>
             <RouterLink style={styles.link} to="/">
