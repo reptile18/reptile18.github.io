@@ -3,7 +3,7 @@ import {Grid} from '@material-ui/core';
 import VizSensor from 'react-visibility-sensor';
 import Fade from '@material-ui/core/Fade';
 import Grow from '@material-ui/core/Grow';
-import CellphonesImg from '../../assets/cellphones-min.png';
+import CellphonesImg from '../../assets/cellphones-min.jpg';
 import Mobile1 from '../../assets/pixel2_ccidi.png';
 import Mobile2 from '../../assets/pixel2_sttl.png';
 import './style.css';
