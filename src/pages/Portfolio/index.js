@@ -16,6 +16,26 @@ import ProjectCard from '../../components/ProjectCard';
 const cards = [
   {
     favicon: "",
+    screenshot: "./assets/portfolio/screenshots/achillesheel.png",
+    title: "Achilles Heel",
+    blurb: "Greek Mythology Game",
+    description: "React Game with Greek Mythology themes",
+    url: "https://achilles-heel.herokuapp.com/",
+    github: "https://github.com/erin-smith/Achilles-heel",
+    tech: ["MongoDB", "Express.js", "React.js", "Node.js", "Material-UI"]
+  },
+  {
+    favicon: "",
+    screenshot: "./assets/portfolio/screenshots/reactportfolio.png",
+    title: "Portfolio",
+    blurb: "React Portfolio",
+    description: "React portfolio application featuring a landing page with animations",
+    url: "https://reptile18.github.io/",
+    github: "https://github.com/reptile18/reptile18.github.io",
+    tech: ["React.js", "Material-UI"]
+  },
+  {
+    favicon: "",
     screenshot: "./assets/portfolio/screenshots/covidcanidoit.png",
     title: "Covid - Can I do it?",
     blurb: "Covid-19 Activity Risk Assessment App",
@@ -42,7 +62,7 @@ const cards = [
     description: "React application for viewing, sorting, and filtering employees.",
     url: "https://safe-journey-04548.herokuapp.com/",
     github: "https://github.com/reptile18/employee-directory",
-    tech: ["React", "React Hooks", "Class Component", "Functional Component", "Axios", "Bootstrap"]
+    tech: ["React.js", "React Hooks", "Class Component", "Functional Component", "Axios", "Bootstrap"]
   },
   {
     favicon: "",
