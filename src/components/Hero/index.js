@@ -32,7 +32,7 @@ const styles = {
   }
 }
 
-function Hero() {
+function Hero(props) {
   const [fadeInJohnny, setFadeInJohnny] = useState(false);
   useEffect(() => {
     if (!fadeInJohnny) {
@@ -40,7 +40,7 @@ function Hero() {
         setFadeInJohnny(true);
       }, 500);
     }
-  },[fadeInJohnny]);
+  },[props.loaded, fadeInJohnny]);
   return (
     <Container maxWidth="xl" style={styles.container}>
       <Grid container direction="row" justify="center" alignItems="center" style={styles.gridContainer}>
