@@ -30,24 +30,22 @@ function ProjectCard(props) {
         <Fade in={animateCard} timeout={duration} >
           <Grid item container sm={6} xs={12}>
             <Card style={styles.card}>
-              <CardActionArea>
-                <CardMedia 
-                  component="img"
-                  alt={props.card.title}
-                  image={props.card.screenshot}
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="h2">
-                    {props.card.title}
-                  </Typography>
-                  <Typography gutterBottom variant="caption" component="p">
-                    {props.card.blurb}
-                  </Typography>
-                  <Typography gutterBottom component="p">
-                    {props.card.description}
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
+              <CardMedia 
+                component="img"
+                alt={props.card.title}
+                image={props.card.screenshot}
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  {props.card.title}
+                </Typography>
+                <Typography gutterBottom variant="caption" component="p">
+                  {props.card.blurb}
+                </Typography>
+                <Typography gutterBottom component="p">
+                  {props.card.description}
+                </Typography>
+              </CardContent>
               <CardActions>
                 <IconButton onClick={() => {window.location.href=props.card.url}} aria-label={`visit ${props.card.title}`}>
                   <LanguageIcon style={styles.icon} />
