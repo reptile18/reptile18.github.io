@@ -46,9 +46,9 @@ function ConnectWithMe() {
                   <a style={styles.emailLink} href="mailto:reptile18@gmail.com">
                     <ContactMailIcon className="email" />
                   </a>
+                  <h3>Email: reptile18(at)gmail.com</h3>
                 </Fade>
               </VizSensor>
-              <h3>Email</h3>
             </Grid>
           </Grid>
         </Grid>
