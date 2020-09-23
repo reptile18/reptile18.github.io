@@ -43,13 +43,13 @@ function ConnectWithMe() {
             <Grid item xs={3} direction="column" justify="center" alignItems="center">
               <VizSensor onChange={isVisible => { SetShowFadeBig(isVisible) }}>
                 <Fade in={showFadeBig} timeout={1000}>
-                  <a style={styles.emailLink} href="mailto:reptile18@gmail.com">
+                  <a style={styles.emailLink} href="mailto:johnny.li.software@gmail.com ">
                     <ContactMailIcon className="email" />
                   </a>
                   
                 </Fade>
               </VizSensor>
-              <a style={styles.emailLink} href="mailto:reptile18@gmail.com"><h3>Email: reptile18(at)gmail.com</h3></a>
+              <a style={styles.emailLink} href="mailto:johnny.li.software@gmail.com "><h3>Email: johnny.li.software@gmail.com </h3></a>
             </Grid>
           </Grid>
         </Grid>
